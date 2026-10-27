@@ -28,13 +28,15 @@
     position: absolute;
     top: 450px;
     left: 730px;
-    width: 1;
-    height: 1;
+    
+    
     z-index: 7;
-    border-radius: 12px;
+    
 
 }
-
+.mommy-image a {
+    display: block
+}
 .mommy-image img {
     top: 600px;
     left: 60px;
@@ -165,4 +167,14 @@
 
     transform: rotate(-50deg);
     z-index: 10;
+}
+
+.card-9 {
+    top: 230px;
+    left: 1090px;
+    width: 250px;
+    height: 300px;
+
+    transform: rotate(10deg);
+    z-index: 11;
 }
