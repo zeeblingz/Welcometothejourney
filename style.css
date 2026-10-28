@@ -3,6 +3,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background-color: black;
 }
 
 .banner video {
@@ -38,7 +39,7 @@
   font-size: 20px;
   letter-spacing: 4px;
   bottom: 300px;
-  color: white;
+  color: rgb(255, 255, 255);
   padding-left: 20px;
 }
 
