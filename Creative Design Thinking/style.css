@@ -1,0 +1,89 @@
+
+
+.kawkaw {
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    align-content: center;
+    
+}
+.kawkaw img {
+    width: 1450px;
+    height: 1000px;
+    top: 200px;
+}
+
+.frame-wrapper {
+    position:absolute;
+    width: 290px;
+}
+#frame-one {
+    left: 100px;
+    width: 200px;
+    height: 200px;
+
+}
+
+#frame-one .photo-target {
+    transform: rotate();
+}
+
+.frame-two {
+    left: ;
+    width: ;
+    height: ;
+}
+
+.frame-two .photo-target {
+    transform: rotate();
+}
+.base-frame-img {
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+
+.photo-target-one {
+    position:absolute;
+    top: 20px;
+    left: 19px;
+    width: 252px;
+    height: 271px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+
+.photo-target-two {
+    position:absolute;
+    top: 20px;
+    left: 19px;
+    width: 252px;
+    height: 271px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+.photo-target-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-prompt {
+  font-size: 14px;
+  
+}
+
+.file-input-hidden {
+  display: none; 
+}
