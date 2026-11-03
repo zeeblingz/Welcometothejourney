@@ -1,0 +1,77 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative design Thinking</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="top-header">
+        <button class="menu btn" aria-label="open menu">
+            <span>&#9776;</span> Menu
+        </button>
+    </header>
+
+     <p>The second row on the right side shows from the body language that the person is exhausted and drained while it shows the awards and achievements, and yet none of those are really what the person likes (i also made them as a doctor) i also spread multiple documents file on purpose to show the messy mindset the person is having. For the left side, from the body langguage itself shows how excited the person is with their artwork, there may not be any awards and certificates but yet she seemed fulfilled with what she loves</p>
+    <div class="image-grid">
+  <div class="row">
+    <img src="Illustration 20261033.PNG" alt="Image 1">
+    <img src="Illustration 20261032.PNG" alt="Image 2">
+    <img src="Illustration 20261022 15.PNG" alt="Image 3">
+  </div>
+  
+  
+
+    <div class="text-frame-wrapper" id="note-one">
+        <img src="Illustration 20261022 16.PNG" alt="Paper Note" class="base-paper-img">
+        <textarea class="user-text-input" placeholder="How was the class this week???"></textarea>
+    </div>
+    <div class="text-frame-wrapper" id="note-two">
+        <img src="Illustration 20261022 16.PNG" alt="Paper Note" class="base-paper-img">
+        <textarea class="user-text-input" placeholder="How was the class this week???"></textarea>
+    </div>
+    <div class="text-frame-wrapper" id="note-three">
+        <img src="Illustration 20261022 16.PNG" alt="Paper Note" class="base-paper-img">
+        <textarea class="user-text-input" placeholder="How was the class this week???"></textarea>
+    </div>
+    <div class="text-frame-wrapper" id="note-four">
+        <img src="Illustration 20261022 16.PNG" alt="Paper Note" class="base-paper-img">
+        <textarea class="user-text-input" placeholder="How was the class this week???"></textarea>
+    </div>
+    <div class="text-frame-wrapper" id="note-five">
+        <img src="Illustration 20261022 16.PNG" alt="Paper Note" class="base-paper-img">
+        <textarea class="user-text-input" placeholder="How was the class this week???"></textarea>
+    </div>
+    
+     
+
+    <div class="lol">
+        <div class="kawkaw">
+            <img src="Illustration 20261022 15.PNG" alt="Background">
+        </div>
+    
+        <!-- FRAME ONE -->
+        <div class="frame-wrapper" id="frame-one">
+            <input type="file" accept="image/*" class="file-input-hidden file-uploader">
+            <div class="photo-target photo-target-one">
+                <img class="uploaded-photo" src="" alt="" style="display: none;">
+                <span class="upload-prompt"></span>
+            </div>
+            <img src="Illustration 20261022 17.PNG" alt="My custom paper" class="base-frame-img">
+        </div>
+
+        <!-- FRAME TWO (Fixed typo .PNG) -->
+        <div class="frame-wrapper" id="frame-two">
+            <input type="file" accept="image/*" class="file-input-hidden file-uploader">
+            <div class="photo-target photo-target-two">
+                <img class="uploaded-photo" src="" alt="" style="display: none;">
+                <span class="upload-prompt"></span>
+            </div>
+            <img src="Illustration 20261022 17.PNG" alt="My custom paper" class="base-frame-img">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
