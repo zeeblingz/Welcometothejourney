@@ -1,10 +1,106 @@
 
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "'Segoe UI'", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  overflow-y: scroll;
+  background-color: #fcfcfc;
+  color: #212529;
+}
+.top-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+  background: #c8743d;
+  padding: 12px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  z-index: 100;
+  height: 65px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-btn {
+  background: #374151;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.menu-btn:hover {
+  background: #9eb8db;
+}
+
+.year-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tab-btn.active {
+  color: #ffffff;
+  background: #2563eb;
+}
 .text-frame-wrapper {
     position: absolute; 
     width: 450px;
 }
 
+.slider-viewport {
+  margin-top: 65px; 
+  width: 100vw;
+  min-height: calc(100vh - 65px);
+  
+}
+
+.slider-track {
+  display: flex;
+  width: 300vw; 
+  min-height: calc(100vh - 65px);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth slide effect */
+}
+
+.page-slide {
+  width: 100vw;
+  padding: 40px;
+  flex-shrink: 0;
+}
+
+
+
+.page-slide h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
 .base-paper-img {
   width: 100%;
   display: block;
@@ -31,12 +127,13 @@
     top: 1020px;
     left: 950px;
     height: 500px;
-    width: ;
+    
     transform: rotate(15deg);
 }
-#note-one .user-text-input {
-    top: ;
-}
+
+    
+
+
 #note-two {
     top: 1500px;
     left: 100px;
@@ -176,8 +273,173 @@
 .file-input-hidden {
   display: none; 
 }
+.tab-btn {
+  text-decoration: none; /* Removes the default hyperlink underline */
+  border: none;          /* Removes any bottom or side borders */
+  background: transparent;
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.file-input-hidden {
-  display: none; 
+.menu-dropdown-container {
+  position: relative;
+  display: inline-block;
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1f2937;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 1000;
+  margin-top: 0;
+}
+
+
+.menu-dropdown-container:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  color: #f3f4f6;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #374151;
+}
+.sub-links {
+  background-color: #111827;
+  padding-left: 12px;
+}
+.sub-links a {
+  color: #9ca3af;
+  font-size: 13px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: none;
+}
+
+.sub-links a:hover {
+  color: #ffffff;
+  background-color: #1f2937;
+}
+
+.year-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  text-decoration: none; 
+  border: none;        
+  background: transparent;
+  color: #9ca3af;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-content {
+  margin-top: 90px; /* Pushes content down so it doesn't hide behind the fixed header */
+  padding: 40px;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.submenu-content {
+  display: none;
+  position: absolute;
+  left: 100%; /* Pops out to the right of the dropdown menu */
+  top: 0;
+  background-color: #1f2937;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.has-submenu:hover .submenu-content {
+  display: block;
+}
+
+.submenu-content a {
+  color: #f3f4f6;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+}
+
+.submenu-content a:hover {
+  background-color: #374151;
+  color: #ffffff;
+}
+.year-dropdown-parent {
+  position: relative; 
+  display: inline-block;
+}
+
+/* Hide sub-projects by default, show on hover */
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Sits right below the year tab */
+  left: 0;
+  background-color: #1f2937;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+/* Show when hovering over the specific year parent */
+.year-dropdown-parent:hover .sub-dropdown-content {
+  display: block;
+}
+
+/* Sub-project link styling */
+.sub-dropdown-content a {
+  color: #f3f4f6;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+}
+
+.sub-dropdown-content a:hover {
+  background-color: #374151;
+}
+
+.zoom-img {
+  object-fit: cover;
+  clip-path: inset(0); /* Masks the zoom inside the image's bounding box */
+  transition: transform 0.4s ease;
+}
+
+.zoom-img:hover {
+  transform: scale(var(--zoom, 0.9)); /* Uses your inline --zoom, or defaults to 10% */
+}
+
